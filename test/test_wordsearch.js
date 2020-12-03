@@ -1,3 +1,4 @@
+//pair programmed with Ash and Joseph
 const chai = require('chai');
 const assert = chai.assert;
 
@@ -34,5 +35,9 @@ describe("#wordSearch()", function() {
     ], 'SEINFELD')
 
     assert.isTrue(result);
+  });
+  it(`should return "empty" if the array is empty`, function() {
+    const result = wordSearch([], 'word')
+    assert.isFalse(result);
   });
 });
